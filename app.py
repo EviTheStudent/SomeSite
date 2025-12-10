@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/about")
 def about():
- return send_file("Imgs30.png", mimetype='image/jpg')
+ return send_file("Imgs/30.png", mimetype='image/jpg')
 
 if __name__ == '__main__':
     app.run()
