@@ -1,12 +1,11 @@
 from flask import *
-from random import *
-
+import random
 # Configure application
 app = Flask(__name__)
 
 
 @app.route("/")
-def SelectRand():
+def SRandImg():
     imageNumber = random.randint(1, 37)
     return send_file(f"Imgs/{imageNumber}.png", mimetype='image/jpg')
 
