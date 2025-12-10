@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def SelectRand():
-    imageNumber = random.random() * 37
+    imageNumber = random.randint(1, 37)
     return send_file(f"Imgs/{imageNumber}.png", mimetype='image/jpg')
 
 @app.route("/about")
