@@ -1,5 +1,5 @@
 from flask import *
-from random import randint
+from random import *
 
 # Configure application
 app = Flask(__name__)
