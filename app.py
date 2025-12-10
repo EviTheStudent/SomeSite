@@ -6,8 +6,16 @@ app = Flask(__name__)
 
 @app.route("/")
 def SRandImg():
-    imageNumber = random.randint(1, 37)
-    return send_file(f"Imgs/{imageNumber}.png", mimetype='image/jpg')
+    typeOfFile = random.randint(1, 3)
+    if typeOfFile == 1:
+        imageNumber = random.randint(1, 37)
+        return send_file(f"Imgs/{imageNumber}.png", mimetype='image/jpg')
+    elif typeOfFile == 2:
+        gifNumber = random.randint(1, 8)
+        return send_file(f"Gifs/{gifNumber}.gif", mimetype='image/gif')
+    else:
+        videoNumber = random.randint(1, 5)
+        return send_file(f"Videos/{videoNumber}.mp4", mimetype='video/mp4')
 
 @app.route("/about")
 def about():
