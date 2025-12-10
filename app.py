@@ -1,5 +1,5 @@
 from flask import *
-from math import Random
+from random import random
 
 # Configure application
 app = Flask(__name__)
@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def SelectRand():
-    imageNumber = Random(1, 37)
+    imageNumber = random.random() * 37
     return send_file(f"Imgs/{imageNumber}.png", mimetype='image/jpg')
 
 @app.route("/about")
