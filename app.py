@@ -10,7 +10,7 @@ def hello():
 
 @app.route("/about")
 def about():
-    return "Something about some birds"
+    return "./Imgs/30.png"
 
 if __name__ == '__main__':
     app.run()
